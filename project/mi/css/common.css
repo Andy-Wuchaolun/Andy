@@ -1,0 +1,20 @@
+.top{
+	height: 34px;
+	background-color: red;
+}
+.header{
+	height: 100px;
+	background-color: green;
+}
+.home{
+	height: 832px;
+	background-color: blue;
+}
+.main{
+	height: 2136px;
+	background-color: pink;
+}
+.footer{
+	height: 284px;
+	background-color: yellow;
+}
