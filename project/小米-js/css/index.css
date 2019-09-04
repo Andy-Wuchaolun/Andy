@@ -354,6 +354,7 @@
 		}
 		.header .search input:focus ~ .search-list{
 			display: block;
+			/*z-index: 50;*/
 		}
 		.header .search input:focus,
 		.header .search input:focus ~ .search-btn{
@@ -414,7 +415,7 @@
 			top: 50px;
 			left: 0px;
 			width:244px;
-			z-index: 1;
+			z-index: 99;
 			background-color: #fff;
 			border: 1px solid #ff6700;
 			box-sizing: border-box;
@@ -446,7 +447,7 @@
 			width: 234px;
 			height: 100%;
 			background-color: rgba(0,0,0,0.5);
-			z-index: 10;
+			z-index: 99;
 		}
 		.home .banner .cate ul{
 			padding: 20px 0px;
@@ -472,6 +473,7 @@
 			width: 1226px;
 			height: 460px;
 		}
+		/*
 		.home .banner .carousel .carousel-imgs li{
 			position: absolute;
 			top: 0px;
@@ -525,6 +527,53 @@
 		.home .banner .carousel .carousel-btns li:hover{
 			background-color: #e3f4fe;
 			border-color: #889298;
+		}
+		*/
+		/*轮播图*/
+		.leftBtn{
+			width: 40px;
+			height: 60px;
+			background-color: rgba(0,0,0,0.5);
+			top: 50%;
+			margin-top: -30px;
+			left: 234px;
+			text-align: center;
+			line-height: 60px;
+			font-size: 30px;
+			color: #fff;
+			cursor: pointer;
+			user-select: none;
+		}
+		.rightBtn{
+			width: 40px;
+			height: 60px;
+			background-color: rgba(0,0,0,0.5);
+			top: 50%;
+			margin-top: -30px;
+			right: 0px;
+			text-align: center;
+			line-height: 60px;
+			font-size: 30px;
+			color: #fff;
+			cursor: pointer;
+			user-select: none;
+		}
+		.bottomBtn{
+			/*font-size: 10px;*/
+			bottom: 10px;
+			/*left: 50%;*/
+			right: 10px;
+		}
+		.bottomBtn li{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			margin-right: 10px;
+			background-color: rgba(0,0,0,0.5);
+			float: left;
+		}
+		.bottomBtn li.active{
+			background-color: rgba(0,0,0,0.8)
 		}
 		.home .hot{
 			height: 170px;
