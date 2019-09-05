@@ -442,8 +442,7 @@
 		}
 		.home .banner .cate{
 			position: absolute;
-			top: 0px;
-			left: 0px;
+			/*float: left;*/
 			width: 234px;
 			height: 100%;
 			background-color: rgba(0,0,0,0.5);
@@ -468,10 +467,17 @@
 		.home .banner .cate ul li a i{
 			float: right;
 		}
-		.home .banner .carousel{
-			position: relative;
-			width: 1226px;
-			height: 460px;
+		/*cate展开部分*/
+
+		.home .cate-content{
+			display: none;
+			position: absolute;
+			left: 234px;
+			height: 100%;
+			max-width: 992px;
+			min-width: 496px;
+			background-color: red;
+			z-index: 999;
 		}
 		/*
 		.home .banner .carousel .carousel-imgs li{
@@ -530,6 +536,11 @@
 		}
 		*/
 		/*轮播图*/
+		.home .banner .carousel{
+			/*position: relative;*/
+			width: 1226px;
+			height: 460px;
+		}
 		.leftBtn{
 			width: 40px;
 			height: 60px;
@@ -677,6 +688,14 @@
 			margin-left: 14px;
 			background-color: red;
 		}*/
+		.home .flash .bd .bd-right{
+			
+			overflow: hidden;
+		}
+		.home .flash .bd .bd-right .product-list{
+			
+			width: 200%;
+		}
 		.home .flash .bd .product-list>li{
 			box-sizing: border-box;
 		}

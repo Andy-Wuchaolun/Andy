@@ -9,6 +9,9 @@ oCart.onmouseenter = function(){
 
 
 handleCarousel();
+handleCate();
+handleFlashTimer();
+handleFlashPart();
 
 
 //轮播图
@@ -157,4 +160,48 @@ function handleCarousel(){
 		height:460,
 		autoPlayTime:2000
 	})
+}
+//cate部分
+function handleCate(){
+
+}
+//倒计时部分
+function handleFlashTimer(){
+	function to2Str(num){
+		return num<10 ?  '0'+num :  ''+num;
+	}
+	var aTimerNum = document.querySelectorAll('.timer-time .timer-num')
+	console.log(aTimerNum)
+	function handleTime(){
+		var allTime = parseInt((endTime - Date.now())/1000);
+		if(allTime<=0){
+			allTime=0;
+			clearInterval(timer)
+		}
+		var iHour = parseInt(allTime/3600);
+		var iMinute = parseInt((allTime%3600)/60);
+		var iSecond = (allTime%3600)%60;
+		aTimerNum[0].innerHTML = to2Str(iHour)
+		aTimerNum[1].innerHTML = to2Str(iMinute)
+		aTimerNum[2].innerHTML = to2Str(iSecond)
+	}
+	var oTimer = document.getElementById('timer');
+	var endDate = new Date('2019-09-14 15:00:00');
+	var endTime = endDate.getTime();
+	var timer = 0;
+	timer = setInterval(handleTime,500);
+	handleTime();
+
+}
+//flash按钮滑动部分
+function handleFlashPart(){
+	var aBtn = document.querySelectorAll('.flash .hd .more .iconfont')
+	// console.log(aBtn)
+	var oUl = document.querySelector('.home .flash .bd .product-list')
+	aBtn[0].onclick = function(){
+		oUl.style.marginLeft = '0px';
+	}
+	aBtn[1].onclick = function(){
+		oUl.style.marginLeft = '-978px';
+	}
 }
