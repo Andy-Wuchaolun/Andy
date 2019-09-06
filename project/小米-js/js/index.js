@@ -1,11 +1,21 @@
-
+//购物车交互功能
 var oCart =document.querySelector('.top .cart')
-var oCartBox =document.querySelector('.top .cart-box')
+var oCartBox =document.querySelector('.top .cart-box a')
 var oCartContent = document.querySelector('.top .cart-content')
 oCart.onmouseenter = function(){
-	// console.log('aaa')
-	oCartContent.style.height = '100px';
+	console.log('aaa')
+	oCartBox.style.color = '#ff6700';
+	oCartBox.style.backgroundColor = '#fff';
+	// oCartContent.style.height = '100px';
+	animation(oCartContent,{height:100},true)
 }
+oCart.onmouseleave = function(){
+	oCartBox.style.color = '#b0b0b0';
+	oCartBox.style.backgroundColor = '#424242';
+	// oCartContent.style.height = '0px';
+	animation(oCartContent,{height:0},true)
+}
+
 
 
 handleCarousel();
